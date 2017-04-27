@@ -1,0 +1,64 @@
+{
+  "name": "smjportfolio",
+  "version": "1.0.0",
+  "description": "personal portfolio project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakeliaj/sjportfolio.git"
+  },
+  "author": "shakelia johnson",
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify-istanbul": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch": "^4.3.11",
+    "istanbul": "^0.4.5",
+    "jasmine-core": "^2.5.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.3.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.26",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-animate": "^1.6.1",
+    "angular-aria": "^1.6.1",
+    "angular-material": "^1.1.1",
+    "angular-mocks": "^1.6.0",
+    "angular-moment": "^1.0.1",
+    "angular-sanitize": "^1.6.2",
+    "angular-ui-router": "^0.3.2",
+    "body-parser": "^1.4.3",
+    "bootstrap-sass": "^3.3.7",
+    "browserify": "^13.3.0",
+    "express": "^4.13.4",
+    "method-override": "^2.1.3",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.1.1",
+    "nodemailer": "^3.1.5",
+    "normalize.css": "^5.0.0",
+    "path": "^0.12.7",
+    "require-dir": "0.3.1"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shakeliaj/sjportfolio/issues"
+  },
+  "homepage": "https://github.com/shakeliaj/sjportfolio#readme"
+}

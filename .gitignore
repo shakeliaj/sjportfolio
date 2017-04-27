@@ -1,0 +1,4 @@
+node_modules/
+app/coverage/
+app/public/js/wholePortfolio.js
+app/public/css/portfoliostyle.css
