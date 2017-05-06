@@ -1,0 +1,10 @@
+<div id="sidebar" ng-controller="SidebarController as ctrl">
+  <div class="sidebar-top">
+  </div>
+  <div class="nav-item-div">
+    <ul class="nav-items">
+      <!--TODO change the href value of the anchor tags for each dropdown item -->
+      <li ng-repeat="navItem in ctrl.dropdownList" id="{{navItem}}" class="dropdown-item"><a ng-href="#!/{{navItem.toLowerCase()}}">{{navItem}}</a></li>
+    </ul>
+  </div>
+</div>

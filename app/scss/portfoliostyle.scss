@@ -12,3 +12,6 @@ html, body, #mainContainer {
     display: none;
   }
 }
+
+@import '../../node_modules/angular-material/angular-material.scss';
+@import '../js/components/sidebar/sidebar';
