@@ -1,0 +1,14 @@
+html, body, #mainContainer {
+  height: 99.9%;
+  width: 99.9%;
+
+  #mainContainer {
+    border: 1px solid red;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
