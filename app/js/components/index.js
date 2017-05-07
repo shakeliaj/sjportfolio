@@ -11,3 +11,7 @@ require('./sidebar/sidebar.component');
 //contact page files
 
 //resume page files
+
+//footer files
+require('./footer/footer');
+require('./footer/footer.component');
