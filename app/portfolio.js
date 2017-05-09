@@ -5,6 +5,7 @@
     require('angular-material');
     require('angular-aria');
     require('angular-animate');
+    require('angular-ui-bootstrap');
     require('angular-ui-router');
     require('angular-sanitize');
     require('moment');
@@ -14,6 +15,8 @@
         'ui.router',
         'ngMaterial',
         //TODO add any new dependencies to this list (ex. angular-bootstrap)
+        'ngAnimate',
+        'ui.bootstrap'
         //TODO add any new services to this dependency list
         //TODO should have a service for the portfolio items db as well as the contact db
     ]);

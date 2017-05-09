@@ -44,6 +44,7 @@
     "angular-mocks": "^1.6.0",
     "angular-moment": "^1.0.1",
     "angular-sanitize": "^1.6.2",
+    "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^0.3.2",
     "body-parser": "^1.4.3",
     "bootstrap-sass": "^3.3.7",

@@ -1,34 +1,51 @@
 @media screen and (max-width: 960px) {
-  #sidebar {
-    width: 100%;
+    #sidebar {
+        width: 100%;
+        z-index: 3;
+        background: black url("/public/img/profile-drawing.png") no-repeat fixed center;
 
-    .sidebar-top {
-      height: 30%;
-    }
+        .sidebar-top {
+            height: 30%;
 
-    .sidebar-footer {
-      display: block;
+            h1 {
+                float: right;
+                margin-right: 2%;
+                color: black;
+                font-family: snell, Roundhand, cursive;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+            }
+        }
+
+        .sidebar-footer {
+            display: block;
+        }
     }
-  }
 }
-@media screen and (min-width: 960px){
-  #sidebar {
-    width: 20%;
+@media screen and (min-width: 960px) {
+    #sidebar {
+        width: 20%;
+        z-index: 5;
 
-    .sidebar-top {
-      height: 15%;
-    }
+        .sidebar-top {
+            height: 15%;
 
-    .sidebar-footer {
-      display: none;
+            h1 {
+                display: none;
+            }
+        }
+
+        .sidebar-footer {
+            display: none;
+        }
     }
-  }
 }
 
 #sidebar {
     position: absolute;
     height: 99.9vh;
-    z-index: 2;
     background-color: white; //TODO change when final colors decided
     border: 1px solid black; //TODO remove this border
 
@@ -39,29 +56,36 @@
     }
 
     .nav-item-div {
-        .nav-items {
-            list-style-type: none;
-            width: 100%;
-            padding-left: 0;
-            margin-top: 0;
-
+        uib-accordion {
             .dropdown-item {
-                text-align: center;
-                display: block;
-                height: 10vh;
-                line-height: 10vh;
-                font-size: 18px;
-                border: 1px solid gray;
-                background-color: black;
+                margin-top: 0px;
 
-                a {
-                  text-decoration: none;
-                  color: white;
-                }
-                a:hover {
+                :hover {
                   color: gray;
+                  text-decoration: none;
+                }
+
+                :focus {
+                  outline: none;
+                  text-decoration: none;
+                }
+                    div.panel-heading {
+                        background-color: black;
+                        border-color: #ddd;
+                        height: 10vh;
+                        margin-top: 0;
+                        text-align: center;
+
+                        h4.panel-title {
+                          color: white !important;
+                          line-height: 6vh;
+                        }
+
+                        i {
+                          line-height: 6vh;
+                        }
+                    }
                 }
             }
-        }
     }
 }

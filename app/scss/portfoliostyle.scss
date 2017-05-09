@@ -14,5 +14,6 @@ html, body, #mainContainer {
 }
 
 @import '../../node_modules/angular-material/angular-material.scss';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 @import '../js/components/sidebar/sidebar';
 @import '../js/components/footer/footer';
