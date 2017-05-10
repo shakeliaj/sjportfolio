@@ -4,8 +4,7 @@ angular.module('sjportfolio')
 //include any dependencies inside the parentheses
 function SidebarController($state, $location) {
     var sideCtrl = this;
-    sideCtrl.showSidebar = false;
-    
+
     //list of dropdown items
     sideCtrl.dropdownList = ['Home', 'About', 'Portfolio', 'Resume', 'Contact'];
 
@@ -20,15 +19,16 @@ function SidebarController($state, $location) {
     sideCtrl.contactList = [];
 
     //TODO if on the home or splash page, hide the sidebar
-    //  if($location.path() == '/' || $location.path() == '/home'){
-    //     sideCtrl.showSidebar = false;
-    //  }
-    // else {
-    //   sideCtrl.showSidebar = true;
-    // }
+    sideCtrl.showSidebar = true;
+
+    if ($location.path() == '/' || $location.path() == '/home') {
+        sideCtrl.showSidebar = false;
+    } else {
+        sideCtrl.showSidebar = true;
+    }
 
     sideCtrl.setDropdownList = function(navItem) {
-      sideCtrl.showThisList = [];
+        sideCtrl.showThisList = [];
         switch (navItem) {
             case 'Home':
                 sideCtrl.showThisList = sideCtrl.homeList;

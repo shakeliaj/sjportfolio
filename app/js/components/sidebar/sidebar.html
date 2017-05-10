@@ -1,38 +1,26 @@
-<div id="sidebar" ng-controller="SidebarController as ctrl">
-    <script type="text/ng-template" id="group-template.html">
-        <div class="panel-heading">
-            <h4 class="panel-title" style="color:#fa39c3">
-       <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
-         <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
-           {{heading}}
-         </span>
-       </a>
-     </h4>
-        </div>
-
-        <div class="panel-collapse collapse" uib-collapse="!isOpen">
-            <div class="panel-body" style="text-align: left" ng-transclude></div>
-        </div>
-    </script>
-
-    <div class="sidebar-top">
+<div id="sidebar" ng-controller="SidebarController as ctrl" ng-hide="!ctrl.showSidebar">
+      <div class="sidebar-top">
       <h1>SMJ</h1>
     </div>
     <div class="nav-item-div">
         <!--testing this-->
-        <uib-accordion>
-        <div uib-accordion-group ng-repeat="navItem in ctrl.dropdownList track by $index" id="{{navItem}}" ng-click="ctrl.setDropdownList(navItem)" class="panel-default dropdown-item" is-open="status.isCustomHeaderOpen" template-url="group-template.html">
+        <uib-accordion ng-if="ctrl.showSidebar">
+        <div uib-accordion-group ng-repeat="navItem in ctrl.dropdownList track by $index" id="{{navItem}}" ng-click="ctrl.setDropdownList(navItem)" class="panel-default dropdown-item" is-open="status.isCustomHeaderOpen">
       <uib-accordion-heading>
       {{navItem}} <i class="pull-right glyphicon" ng-if="ctrl.setDropdownList(navItem).length != 0" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
       </uib-accordion-heading>
-      <ul ng-hide="ctrl.showThisList.length == 0">
-          <li ng-repeat="linkItem in ctrl.showThisList">{{linkItem}}
+      <ul>
+          <li ng-hide="ctrl.setDropdownList(navItem).length == 0" ng-repeat="linkItem in ctrl.showThisList">{{linkItem}}
           </li>
       </ul>
     </div>
   </uib-accordion>
         <!--end here-->
     </div>
+    <!--only for web version-->
+    <div class="quote-div">
+    </div>
+    <!--only for mobile version-->
     <div class="sidebar-footer">
         <footer></footer>
     </div>

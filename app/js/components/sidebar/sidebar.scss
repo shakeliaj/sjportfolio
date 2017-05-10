@@ -1,8 +1,20 @@
 @media screen and (max-width: 960px) {
     #sidebar {
+        height: 99.9vh;
         width: 100%;
         z-index: 3;
         background: black url("/public/img/profile-drawing.png") no-repeat fixed center;
+        background-color: white;
+
+        .dropdown-item {
+            ul {
+                li {
+                    width: 100%;
+                    margin-left: -20px;
+                    text-align: center;
+                }
+            }
+        }
 
         .sidebar-top {
             height: 30%;
@@ -11,7 +23,7 @@
                 float: right;
                 margin-right: 2%;
                 color: black;
-                font-family: snell, Roundhand, cursive;
+                font-family: fantasy;
                 transform: rotate(45deg);
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -22,12 +34,17 @@
         .sidebar-footer {
             display: block;
         }
+
+        .quote-div {
+            display: none;
+        }
     }
 }
 @media screen and (min-width: 960px) {
     #sidebar {
         width: 20%;
         z-index: 5;
+        height: 93vh;
 
         .sidebar-top {
             height: 15%;
@@ -40,52 +57,80 @@
         .sidebar-footer {
             display: none;
         }
+
+        .quote-div {
+            width: 100%;
+            border: 1px solid white;
+            height: 15%;
+            position: relative;
+            margin-left: 0;
+            margin-top: 50px;
+        }
     }
 }
 
 #sidebar {
     position: absolute;
-    height: 99.9vh;
-    background-color: white; //TODO change when final colors decided
-    border: 1px solid black; //TODO remove this border
 
     .sidebar-top {
         position: relative;
-        border: 1px solid purple; //TODO remove this border
         width: 100%;
     }
 
     .nav-item-div {
         uib-accordion {
+            #About,
+            #Portfolio,
+            #Resume {
+                h4 {
+                    padding-left: 15px;
+                }
+            }
+
+            #Contact, #Home {
+                div.panel-body {
+                  display: none;
+                }
+            }
+
             .dropdown-item {
-                margin-top: 0px;
+                margin-top: 0;
 
                 :hover {
-                  color: gray;
-                  text-decoration: none;
+                    color: gray;
+                    text-decoration: none;
                 }
 
                 :focus {
-                  outline: none;
-                  text-decoration: none;
+                    outline: none;
+                    text-decoration: none;
                 }
-                    div.panel-heading {
-                        background-color: black;
-                        border-color: #ddd;
-                        height: 10vh;
-                        margin-top: 0;
-                        text-align: center;
 
-                        h4.panel-title {
-                          color: white !important;
-                          line-height: 6vh;
-                        }
+                ul {
+                    list-style-type: none;
 
-                        i {
-                          line-height: 6vh;
-                        }
+                    li {
+                        margin-top: 5px;
+                    }
+                }
+
+                div.panel-heading {
+                    background-color: black;
+                    border-color: #ddd;
+                    height: 10vh;
+                    margin-top: 0;
+                    text-align: center;
+
+                    h4.panel-title {
+                        color: cyan !important;
+                        line-height: 6vh;
+                    }
+
+                    i {
+                        line-height: 6vh;
                     }
                 }
             }
+        }
     }
 }
