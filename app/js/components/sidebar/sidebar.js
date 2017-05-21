@@ -18,14 +18,21 @@ function SidebarController($state, $location) {
     sideCtrl.resumeList = ['resume1', 'resume2', 'resume3'];
     sideCtrl.contactList = [];
 
-    //TODO if on the home or splash page, hide the sidebar
+    //if on the home or splash page, hide the sidebar
     sideCtrl.showSidebar = true;
 
-    if ($location.path() == '/' || $location.path() == '/home') {
+    if (($location.path() == '/' || $location.path() == '/home') && window.innerWidth > 960) {
         sideCtrl.showSidebar = false;
     } else {
         sideCtrl.showSidebar = true;
     }
+
+    //when clicking on sidebar item, change state
+    sideCtrl.changeState = function(navItem) {
+      var state = navItem.toLowerCase();
+      console.log('in changeState method with '+ state)
+      $state.go(state);
+    };
 
     sideCtrl.setDropdownList = function(navItem) {
         sideCtrl.showThisList = [];

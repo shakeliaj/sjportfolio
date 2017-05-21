@@ -3,19 +3,18 @@
       <h1>SMJ</h1>
     </div>
     <div class="nav-item-div">
-        <!--testing this-->
         <uib-accordion ng-if="ctrl.showSidebar">
-        <div uib-accordion-group ng-repeat="navItem in ctrl.dropdownList track by $index" id="{{navItem}}" ng-click="ctrl.setDropdownList(navItem)" class="panel-default dropdown-item" is-open="status.isCustomHeaderOpen">
+        <div uib-accordion-group ng-repeat="navItem in ctrl.dropdownList track by $index" id="{{navItem}}" ng-click="ctrl.changeState(navItem);ctrl.setDropdownList(navItem)" class="panel-default dropdown-item" is-open="status.isCustomHeaderOpen">
       <uib-accordion-heading>
       {{navItem}} <i class="pull-right glyphicon" ng-if="ctrl.setDropdownList(navItem).length != 0" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
-      </uib-accordion-heading>
+    </uib-accordion-heading>
       <ul>
-          <li ng-hide="ctrl.setDropdownList(navItem).length == 0" ng-repeat="linkItem in ctrl.showThisList">{{linkItem}}
+        <!--TODO add inner list item link to href in anchor -->
+          <li ng-hide="ctrl.setDropdownList(navItem).length == 0" ng-repeat="linkItem in ctrl.showThisList"><a href="#">{{linkItem}}</a>
           </li>
       </ul>
     </div>
   </uib-accordion>
-        <!--end here-->
     </div>
     <!--only for web version-->
     <div class="quote-div">

@@ -54,6 +54,13 @@
             }
         }
 
+        .dropdown-item {
+            ul {
+              text-align: center;
+              padding-left: 0px;
+            }
+        }
+
         .sidebar-footer {
             display: none;
         }
@@ -111,6 +118,10 @@
 
                     li {
                         margin-top: 5px;
+
+                        a {
+                          color: black;
+                        }
                     }
                 }
 
